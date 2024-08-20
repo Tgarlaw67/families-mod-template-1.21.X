@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "familiesmod",
+	"version": "${version}",
+	"name": "Families Mod",
+	"description": "This is a mod to add families into minecraft.",
+	"authors": [
+		"T_garlaw67"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/familiesmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.t_garlaw67.familiesmod.FamiliesMod"
+		],
+		"fabric-datagen": [
+			"net.t_garlaw67.familiesmod.FamiliesModDataGenerator"
+		],
+		"client": [
+			"net.t_garlaw67.familiesmod.FamiliesModClient"
+		]
+	},
+	"mixins": [
+		"familiesmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.2",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
