@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "G": {
+      "item": "minecraft:gold_nugget"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "N": {
+      "item": "familiesmod:diamond_nugget"
+    }
+  },
+  "pattern": [
+    "NGN",
+    "GDG",
+    "NGN"
+  ],
+  "result": {
+    "count": 1,
+    "id": "familiesmod:wedding_ring"
+  }
+}
