@@ -3,8 +3,8 @@
 	"package": "net.t_garlaw67.familiesmod.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
 	],
+
 	"injectors": {
 		"defaultRequire": 1
 	}

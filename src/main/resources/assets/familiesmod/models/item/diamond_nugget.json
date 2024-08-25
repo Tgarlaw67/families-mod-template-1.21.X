@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "familiesmod:item/diamond_nugget"
+  }
+}

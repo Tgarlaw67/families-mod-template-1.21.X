@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "familiesmod:pink_garnet_block"
+    }
+  ],
+  "result": {
+    "id": "familiesmod:pink_garnet",
+    "count": 9
+  }
+}
