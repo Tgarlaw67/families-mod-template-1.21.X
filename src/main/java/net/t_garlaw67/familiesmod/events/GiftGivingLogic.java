@@ -6,7 +6,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.ActionResult;
 import net.minecraft.text.Text;
-import net.t_garlaw67.familiesmod.entity.HumanEntity;
 import net.t_garlaw67.familiesmod.util.RomancePointsUtil;
 
 public class GiftGivingLogic {
@@ -22,13 +21,11 @@ public class GiftGivingLogic {
                 if (stack.getItem() == Items.EMERALD || stack.getItem() == Items.POPPY) {
                     if (!world.isClient()) {
                         // Add romance points to the villager
-                        RomancePointsUtil.addRomancePoints((HumanEntity) villager, 10);
 
                         // Decrease the item stack (the gift is consumed)
                         stack.decrement(1);
 
                         // Get the current romance points and send a message to the player
-                        int currentPoints = RomancePointsUtil.getRomancePoints((HumanEntity) villager);
                         player.sendMessage(Text.of("Villager received the gift! Current romance points: " + currentPoints), true);
                     }
                     return ActionResult.SUCCESS;
