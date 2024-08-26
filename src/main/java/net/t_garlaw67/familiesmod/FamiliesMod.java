@@ -19,11 +19,13 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.t_garlaw67.familiesmod.entity.HumanEntity;
 import net.t_garlaw67.familiesmod.events.EntitySpawnHandler;
 import net.t_garlaw67.familiesmod.events.GiftGivingLogic;
+import net.t_garlaw67.familiesmod.events.MarriageLicenseEventHandler;
 import net.t_garlaw67.familiesmod.events.WeddingRingEventHandler;
 import net.t_garlaw67.familiesmod.item.ModItemGroups;
 import net.t_garlaw67.familiesmod.item.ModItems;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
 import net.minecraft.server.world.ServerWorld;
+import net.t_garlaw67.familiesmod.trade.CustomTradeOffer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,6 +43,7 @@ public class FamiliesMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItemGroups.registerItemGroups();
+		CustomTradeOffer.registerTrades();
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
@@ -48,6 +51,7 @@ public class FamiliesMod implements ModInitializer {
 		WeddingRingEventHandler.registerEvents();
 		GiftGivingLogic.registerEvents();
 		EntitySpawnHandler.registerEvents();
+		MarriageLicenseEventHandler.registerEvents();
 
 // Register the Human entity
 		Registry.register(Registries.ENTITY_TYPE, Identifier.of("familiesmod", "human"), HUMAN_ENTITY);
